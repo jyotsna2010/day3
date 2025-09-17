@@ -1,1 +1,1 @@
-it provides scheduler for exams
+it was a food delivery application.
