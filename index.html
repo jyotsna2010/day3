@@ -3,149 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam Scheduler</title>
+  <title>Food Delivery</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f7fa;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
     }
 
     header {
-      background: #4CAF50;
+      background: #ff5722;
       color: white;
       text-align: center;
       padding: 20px;
     }
 
-    .container {
-      width: 80%;
-      margin: 20px auto;
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
     }
 
-    .form-box {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-
-    .form-box h2 {
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    .form-box label {
-      display: block;
-      margin-top: 10px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
 
-    .form-box input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    nav a:hover {
+      color: #ff5722;
     }
 
-    .form-box button {
-      margin-top: 15px;
-      padding: 10px 15px;
-      background: #4CAF50;
+    .hero {
+      background: url("https://images.unsplash.com/photo-1600891963932-9601f5d41d94") no-repeat center/cover;
       color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
+      text-align: center;
+      padding: 100px 20px;
     }
 
-    .form-box button:hover {
-      background: #45a049;
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
+    .hero p {
+      font-size: 20px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background: white;
       border-radius: 8px;
-      overflow: hidden;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    table th, table td {
-      border: 1px solid #ddd;
-      padding: 12px;
+      overflow: hidden;
       text-align: center;
     }
 
-    table th {
-      background: #4CAF50;
-      color: white;
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
-    table tr:nth-child(even) {
-      background: #f9f9f9;
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .card p {
+      padding: 0 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #ff5722;
     }
 
     footer {
       text-align: center;
-      padding: 15px;
       background: #333;
       color: white;
-      margin-top: 20px;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Exam Scheduler</h1>
-    <p>Plan and organize your upcoming exams</p>
+    <h1>Foodie Express</h1>
+    <p>Delicious food delivered to your doorstep</p>
   </header>
 
-  <div class="container">
-    <div class="form-box">
-      <h2>Add Exam</h2>
-      <form>
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter subject">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact</a>
+  </nav>
 
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date">
-
-        <label for="time">Time</label>
-        <input type="time" id="time" name="time">
-
-        <button type="submit">Add to Schedule</button>
-      </form>
-    </div>
-
-    <h2>Exam Schedule</h2>
-    <table>
-      <tr>
-        <th>Subject</th>
-        <th>Date</th>
-        <th>Time</th>
-      </tr>
-      <tr>
-        <td>Mathematics</td>
-        <td>2025-10-05</td>
-        <td>10:00 AM</td>
-      </tr>
-      <tr>
-        <td>Physics</td>
-        <td>2025-10-08</td>
-        <td>2:00 PM</td>
-      </tr>
-    </table>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Exam Scheduler | All Rights Reserved</p>
-  </footer>
-
-</body>
-</html>
+  <section class="hero"
